@@ -1,0 +1,12 @@
+plugins {
+    id "org.xbib.gradle.plugin.jflex" version "1.7.0"
+}
+
+repositories {
+    mavenCentral()
+}
+
+tasks.named('generateJflex').configure {
+   // write output into custom location .
+   target = file("${project.buildDir}/generated/sources/jflexCustom/")
+}
